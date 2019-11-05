@@ -27,4 +27,4 @@ class CarGame:
             elif self.command == "quit":
                 break
         else:
-            print("sorry, i don't understand")
+            print("sorry, I don't understand")
