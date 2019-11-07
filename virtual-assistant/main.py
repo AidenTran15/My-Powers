@@ -64,6 +64,27 @@ def myCommand():
 def getWeatherJSONData():
     res = requests.get('https://api.ipify.org')
     ip = res.text
-    send_url = ''
+    send_url = 'http://api.ipstack.com/'+ip+'?access_key=7e5ea1fda803cb076716badc347f0885&output=json&legacy=1'
+    r = requests.get(send_url)
+    j = json.loads(r.text)
+    lat = j['latitude']
+    lon = j['longtitude']
+    response = requests.get('https://api.darksky.net/forecast/24cd61bddf35c80d5e2ff15663b50ec8/'+str(lat)+','+str(lon)+'')
+    jsonWeather = json.loads(response.text)
+    return jsonWeather
+
+
+    if __name__ == '__main__':
+
+        while True:
+
+            query = myCommand()
+            query = query.lower()
+
+            if "open youtube" in query:
+                speak('yes sir')
+                
+
+
 
 
