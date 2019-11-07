@@ -10,7 +10,7 @@ import os
 import sys
 import json
 import requests
-import emoji
+# import emoji
 from datetime import datetime
 
 
