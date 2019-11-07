@@ -73,48 +73,83 @@ def getWeatherJSONData():
     return jsonWeather
 
 
-    if __name__ == '__main__':
+if __name__ == '__main__':
 
-        while True:
+    while True:
 
-            query = myCommand()
-            query = query.lower()
+        query = myCommand()
+        query = query.lower()
 
-            if "open youtube" in query:
-                speak('yes sir')
-                webbrowser.open('www.youtube.com')
+        if "open youtube" in query:
+            speak('yes sir')
+            webbrowser.open('www.youtube.com')
 
-            elif "open google" in query:
-                speak("yes sir")
-                webbrowser.open('https://www.google.com.au/')
+        elif "open google" in query:
+            speak("yes sir")
+            webbrowser.open('https://www.google.com.au/')
 
-            elif "open gmail" in query:
-                speak("yes sir")
-                webbrowser.open('www.gmail.com')
+        elif "open gmail" in query:
+            speak("yes sir")
+            webbrowser.open('www.gmail.com')
 
-            elif "open instagram" in query:
-                speak("yes sir")
-                webbrowser.open('www.instagram.com')
+        elif "open instagram" in query:
+            speak("yes sir")
+            webbrowser.open('www.instagram.com')
             
-            elif "open facebook" in query:
-                speak('yes sir')
-                webbrowser.open('www.facebook.com')
+        elif "open facebook" in query:
+            speak('yes sir')
+            webbrowser.open('www.facebook.com')
             
-            elif "open messenger" in query:
-                speak("yes sir")
-                webbrowser.open('www.facebook.com')
+        elif "open messenger" in query:
+            speak("yes sir")
+            webbrowser.open('www.facebook.com')
             
-            elif "open hanout" in query:
-                speak('yes sir')
-                webbrowser.open('www.hangout.com')
+        elif "open hanout" in query:
+            speak('yes sir')
+            webbrowser.open('www.hangout.com')
 
-            elif "movie" in query:
-                speak('yes sir')
-                webbrowser.open('http://topphimhd.com/tag/banhtv/')
+        elif "movie" in query:
+            speak('yes sir')
+            webbrowser.open('http://topphimhd.com/tag/banhtv/')
 
-            elif "what\'s up" in query or 'how are you' in query:
-                stMsgs = ['Just doing my thing!', 'I am fine', 'Nice!', 'I am nice and full of energy']
-                
+        elif "what\'s up" in query or 'how are you' in query:
+            stMsgs = ['Just doing my thing!', 'I am fine', 'Nice!', 'I am nice and full of energy']
+            speak(random.choice(stMsgs))
+
+        elif 'email' in query:
+            speak(' Who is the recipient? ')
+            recipient = myCommand()
+
+            if 'me' in recipient:
+                try:
+                    speak('What should I say? ')
+                    content = myCommand()
+
+                    server = smtplib.SMTP('smtp.gmail.com', 587)
+                    server.ehlo()
+                    server.starttls()
+                    server.login("Your_Username", "Your_Password")
+                    server.sendmail('Your_Username', "Recipient_Username", content)
+                    server.close()
+                    speak('Email sent!')
+
+                except:
+                    speak('Sorry Aiden! I am unable to send your message at this moment!')
+
+
+        elif 'nothing' in query or 'abort' in query or 'stop' in query:
+            speak('yes sir')
+            speak('Bye Aiden, have a good day.')
+            sys.exit()
+            
+
+
+
+    
+
+
+
+
                 
 
 
