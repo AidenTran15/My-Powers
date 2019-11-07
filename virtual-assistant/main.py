@@ -141,7 +141,16 @@ if __name__ == '__main__':
             speak('yes sir')
             speak('Bye Aiden, have a good day.')
             sys.exit()
-            
+        
+        elif 'hello' in query:
+            speak('Hello Aiden')
+
+        elif 'bye' in query:
+            speak('Bye Aiden, have a good day')
+            sys.exit()
+
+        
+
 
 
 
