@@ -149,7 +149,15 @@ if __name__ == '__main__':
             speak('Bye Aiden, have a good day')
             sys.exit()
 
-        
+        elif 'play music' in query:
+            music_floder = Your_music_folder_path
+            music = [music1, music2, music3, music4, music5]
+            random_music = music_folder + randon.choice(music) + '.mp3'
+            os.system(random_music)
+
+            speak('yes sir, here is your music! Enjoy')
+
+            elif "dinner"
 
 
 
