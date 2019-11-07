@@ -16,13 +16,13 @@ from datetime import datetime
 
 engine = pyttsx3.init('sapi5')
 
-client = wolframalpha.Client('Your_App_ID'
+client = wolframalpha.Client('Your_App_ID')
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices)-1].id)
 
 def speak(audio):
-    print('Erayus: '= audio)
+    print('Erayus: ' + audio)
     engine.say(audio)
     engine.runAndWait()
 
