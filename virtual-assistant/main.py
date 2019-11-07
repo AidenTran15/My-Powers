@@ -157,7 +157,14 @@ if __name__ == '__main__':
 
             speak('yes sir, here is your music! Enjoy')
 
-            elif "dinner"
+        elif "dinner" in query:
+            foods = ['noodle','Pho','Pizza','KFC','Sushi',]
+            num_of_food = len(foods)
+            randonNumber = random.randint(0,num_of_food -1)
+            speak("I have suggestion for you, how about "+ foods[randonNumber + "?"])
+            
+
+
 
 
 
