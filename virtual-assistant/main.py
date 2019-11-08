@@ -45,7 +45,7 @@ def myCommand():
     return query
 
 def greetMe():
-    speak('Hello there, may I ask for your name first?');
+    speak('Hello there, may I ask for your name first?')
     name = myCommand()
     name = name.title()
     currentH = int (datetime.now().hour)
@@ -211,3 +211,4 @@ if __name__ == '__main__':
 
         speak('Next Command! Sir!')       
  
+greetMe()
