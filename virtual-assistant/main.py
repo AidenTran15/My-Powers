@@ -186,21 +186,28 @@ if __name__ == '__main__':
             number_of_mins = myCommand()
             print(number_of_mins)
         elif "your name" in query:
-            speak('I am Erayus, your personal assistant')    
+            speak('I am Erayus, your personal assistant')  
+
+        else:
+            query = query
+            speak = 'Searching...'
+            try:
+                try:
+                    res = client.query(query)
+                    results = next(res.results).text
+                    speak('WOLFRAM-ALPHA says - ')
+                    speak(' Got it.')
+                    speak(results)
+
+                except:
+                    results = wikipedia.summary(query, sentence=2)
+                    speak('Got it.')
+                    speak ('WIKIPEDIA says - ')
+                    speak(results)
+
+            except:
+                webbrowser.open('www.google.com')
 
 
-
-
-
-
-    
-
-
-
-
-                
-
-
-
-greetMe()
-
+        speak('Next Command! Sir!')       
+ 
