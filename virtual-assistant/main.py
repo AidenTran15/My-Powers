@@ -177,7 +177,16 @@ if __name__ == '__main__':
             temMinC = (json_data['daily']['data'][0]['temperatureMin']-32)*5/9
             temMaxC = (json_data['daily']['data'][0]['temperatureMax']-32)*5/9
             speak("the weather tommorow is {} and the temperature is about {} to {} degree celcius".format(summary,str(round(temMinC,2)),str(round(temMaxC))))
-            
+        elif "what time" in query:
+            now = datetime.now()
+            current_time = now.strftime("%d/%m?%Y, %H:%M:%S")
+            speak("Current Time="+ current_time)
+        elif "timer" in query:
+            speak("How many minutes, sir ?")
+            number_of_mins = myCommand()
+            print(number_of_mins)
+        elif "your name" in query:
+            speak('I am Erayus, your personal assistant')    
 
 
 
