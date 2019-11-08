@@ -169,7 +169,15 @@ if __name__ == '__main__':
              #calculate F to C
              temC = (json_data['currently']['temperature']-32)*5/9
              speak("the weather is {} and the temperature is {} degree celcius".format(summary,str(round(temC,2)))) 
-              
+        elif  "weather tommorow" in query:
+            json_data = getWeatherJSONData()
+
+            summary = json_data['daily']['data'][0]['summary']
+            # Calculate F to C
+            temMinC = (json_data['daily']['data'][0]['temperatureMin']-32)*5/9
+            temMaxC = (json_data['daily']['data'][0]['temperatureMax']-32)*5/9
+            speak("the weather tommorow is {} and the temperature is about {} to {} degree celcius".format(summary,str(round(temMinC,2)),str(round(temMaxC))))
+            
 
 
 
