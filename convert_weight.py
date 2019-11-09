@@ -21,5 +21,5 @@ elif "lbs" in weightArr:
     weight_kg = weightNum *  0.45359237
     print(str(weight_kg) + " kg")
 else:
-    print("please check your unit again")
+    print("please check your unit again ")
 
