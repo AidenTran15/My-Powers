@@ -1,4 +1,4 @@
-def lagest_number_and_second_largest_number(inputString):
+def checkParliment(inputString):
     list_input = list(inputString)
     list_input.reverse()
     join_input = ''.join(list_input)
@@ -10,4 +10,4 @@ def lagest_number_and_second_largest_number(inputString):
 
     return join_input
 
-print(lagest_number_and_second_largest_number("aabaa"))
+print(checkParliment("aabaa"))
