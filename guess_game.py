@@ -1,7 +1,7 @@
 import random
 
 class GuessingGame:
-
+  
   def __init__(self):
     self.secret_number = random.randint(0,10)
     self.guess_limit = 100
