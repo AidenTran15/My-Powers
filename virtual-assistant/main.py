@@ -28,7 +28,6 @@ def speak(audio):
     engine.runAndWait()
 
 def myCommand():
-
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
@@ -67,12 +66,12 @@ def getWeatherJSONData():
     r = requests.get(send_url)
     j = json.loads(r.text)
     lat = j['latitude']
-    lon = j['longtitude']
+    lon = j['longitude']
     response = requests.get('https://api.darksky.net/forecast/24cd61bddf35c80d5e2ff15663b50ec8/'+str(lat)+','+str(lon)+'')
     jsonWeather = json.loads(response.text)
     return jsonWeather
 
-
+greetMe()
 if __name__ == '__main__':
 
     while True:
@@ -146,7 +145,7 @@ if __name__ == '__main__':
             speak('Hello Aiden')
 
         elif 'bye' in query:
-            speak('Bye Aiden, have a good day')
+            speak('Bye' + name + ', have a good day')
             sys.exit()
 
         elif 'play music' in query:
@@ -169,7 +168,7 @@ if __name__ == '__main__':
              #calculate F to C
              temC = (json_data['currently']['temperature']-32)*5/9
              speak("the weather is {} and the temperature is {} degree celcius".format(summary,str(round(temC,2)))) 
-        elif  "weather tommorow" in query:
+        elif  "weather tomorrow" in query:
             json_data = getWeatherJSONData()
 
             summary = json_data['daily']['data'][0]['summary']
