@@ -4,6 +4,6 @@ import random
 #leader = random.choice(member)
 #print(leader)
 for i in range(5):
-    a = random.randint(20,30)
+    a = random.randint(10,30)
 
 print(a)    
