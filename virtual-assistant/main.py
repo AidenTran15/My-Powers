@@ -10,8 +10,8 @@ import os
 import sys
 import json
 import requests
-# import emoji
 from datetime import datetime
+import time
 
 
 engine = pyttsx3.init('sapi5')
@@ -72,6 +72,7 @@ def getWeatherJSONData():
     return jsonWeather
 
 greetMe()
+
 if __name__ == '__main__':
 
     while True:
@@ -149,7 +150,7 @@ if __name__ == '__main__':
             sys.exit()
 
         elif 'play music' in query:
-            music_floder = Your_music_folder_path
+            music_floder = ''
             music = [music1, music2, music3, music4, music5]
             random_music = music_folder + randon.choice(music) + '.mp3'
             os.system(random_music)
@@ -181,9 +182,11 @@ if __name__ == '__main__':
             current_time = now.strftime("%d/%m?%Y, %H:%M:%S")
             speak("Current Time="+ current_time)
         elif "timer" in query:
-            speak("How many minutes, sir ?")
-            number_of_mins = myCommand()
-            print(number_of_mins)
+            speak("How many seconds, sir ?")
+            nums_of_seconds = myCommand()
+            speak(nums_of_seconds + "seconds. Starting now")
+            time.sleep(int(nums_of_seconds))
+            speak('Time is up!, ' + name)
         elif "your name" in query:
             speak('I am Erayus, your personal assistant')  
 
@@ -206,7 +209,6 @@ if __name__ == '__main__':
 
             except:
                 webbrowser.open('www.google.com')
-
 
         speak('Next Command! Sir!')       
  
