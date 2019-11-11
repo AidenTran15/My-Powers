@@ -56,7 +56,7 @@ def greetMe():
 
     if currentH >= 18 and currentH !=0:
         speak('Good Evening, ' + name + "!")
-    speak('Hello ' + name + ', I am your digital assistant Erayus the Lady Erayus')
+    speak('Hello ' + name + ', I am your digital assistant Erayus')
     speak('How may I help you '+ name + '?')
 
 def getWeatherJSONData():
@@ -138,11 +138,11 @@ if __name__ == '__main__':
 
         elif 'nothing' in query or 'abort' in query or 'stop' in query:
             speak('yes sir')
-            speak('Bye Aiden, have a good day.')
+            speak('Bye,' + name + 'have a good day.')
             sys.exit()
         
         elif 'hello' in query:
-            speak('Hello Aiden')
+            speak('Hello' + name)
 
         elif 'bye' in query:
             speak('Bye' + name + ', have a good day')
