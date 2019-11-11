@@ -179,7 +179,7 @@ if __name__ == '__main__':
             speak("the weather tommorow is {} and the temperature is about {} to {} degree celcius".format(summary,str(round(temMinC,2)),str(round(temMaxC))))
         elif "what time" in query:
             now = datetime.now()
-            current_time = now.strftime("%d/%m?%Y, %H:%M:%S")
+            current_time = now.strftime("%H:%M:%S")
             speak("Current Time="+ current_time)
         elif "timer" in query:
             speak("How many seconds, sir ?")
