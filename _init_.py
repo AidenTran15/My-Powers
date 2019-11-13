@@ -4,7 +4,7 @@ class Person:
 
     def talk(self):
         print(talk)
-        
+      
 aiden = Person("Aiden Tran")
 print(aiden.name)
 aiden.talk
