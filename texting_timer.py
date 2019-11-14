@@ -12,11 +12,36 @@
 #       mins = minutes + 1
 #       print (">>>>>>>>>>>>>>>>>>>>>", mins)
 
-number = [5,27,5,25,12]
-max = number[0]
-for max in (number):
-   if number > max:
-      max = number
+# number = [5,27,5,25,12]
+# max = number[0]
+# for max in (number):
+#    if number > max:
+#       max = number
 
-print(max)
+# print(max)
+
+def makearrayconsecutive(statues):
+  # Result array
+  result_array = []
+  #Find max number of the array
+  max_num = max(statues)
+  #Find min number of the array
+  min_num = min(statues)
+  # Iterate from min to max
+  for i in range(min_num,max_num):
+    if i not in statues:
+      result_array.append(i)
+
+  result = len(result_array)
+  print(result)
+
+
+    # If i is not in statues
+      # i is addded to result_array
+  
+  # Return length of result_array
+
+
+
+print(makearrayconsecutive([6,2,3,8]))
 
