@@ -35,13 +35,5 @@ def makearrayconsecutive(statues):
   result = len(result_array)
   print(result)
 
-
-    # If i is not in statues
-      # i is addded to result_array
-  
-  # Return length of result_array
-
-
-
-print(makearrayconsecutive([6,2,3,8]))
+print(makearrayconsecutive([6,3]))
 
