@@ -20,6 +20,13 @@ def check_price():
 
 
 def send_email():
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.ehlo()
+
+    server.login('trantuankiett.02@gmail.com', 'Jasontran15112002')
+    
 
 
 
