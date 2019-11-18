@@ -27,7 +27,10 @@ def send_email():
 
     server.login('trantuankiett.02@gmail.com', 'Jasontran15112002')
     subject = 'Hey, the price fell down!'
-    body = 'Check the amazon link'
+    body = 'Check the amazon link https://www.amazon.com.au/Apple-Iphone-Silver-Trusted-seller/dp/B077PQGQ4K/ref=sr_1_1?keywords=iphone+x&qid=1574036484&sr=8-1'
+
+    msg = f"subject: {subject}\n\n{body}"
+    
 
 
 
