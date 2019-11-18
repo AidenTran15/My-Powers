@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import smtplib
 
 URL = 'https://www.amazon.com.au/Apple-Iphone-Silver-Trusted-seller/dp/B077PQGQ4K/ref=sr_1_1?keywords=iphone+x&qid=1574036484&sr=8-1'
 
@@ -16,4 +17,10 @@ def check_price():
 
     if(converted_price < 1,000):
         send_mail()
+
+
+def send_email():
+
+
+
 
