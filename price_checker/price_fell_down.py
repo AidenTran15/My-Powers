@@ -26,7 +26,9 @@ def send_email():
     server.ehlo()
 
     server.login('trantuankiett.02@gmail.com', 'Jasontran15112002')
-    
+    subject = 'Hey, the price fell down!'
+    body = 'Check the amazon link'
+
 
 
 
