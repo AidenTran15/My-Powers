@@ -22,4 +22,4 @@ elif human == "rock" and comp == "rock":
 elif human == "paper" and comp == "paper":
     print ("Tie.")
 elif human == "scissors" and comp == "scissors":
-    print ("Tie.")
+    print ('Tie. ')
